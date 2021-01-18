@@ -1,0 +1,13 @@
+{
+    "title": "key without field",
+    "query":{
+              "WHERE": {},
+              "OPTIONS": {
+                "COLUMNS": [
+                  "courses__ "
+                ]
+              }
+            },
+    "isQueryValid": false,
+    "result":"InsightError"
+}

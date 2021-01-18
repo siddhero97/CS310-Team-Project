@@ -1,0 +1,34 @@
+{
+    "title": "Rooms Is",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "GT": {
+                        "rooms_seats": 0
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_lat",
+                "countStuff"
+            ]
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "rooms_lat"
+            ],
+            "APPLY": [
+                {
+                    "countStuff": {
+                        "AVG": "rooms_lat"
+                    }
+                }
+            ]
+        }
+    },
+    "isQueryValid": true,
+    "result":[{"rooms_lat":49.2699,"countStuff":49.27},{"rooms_lat":49.26958,"countStuff":49.27},{"rooms_lat":49.26372,"countStuff":49.26},{"rooms_lat":49.2666,"countStuff":49.27},{"rooms_lat":49.26479,"countStuff":49.26},{"rooms_lat":49.26862,"countStuff":49.27},{"rooms_lat":49.26826,"countStuff":49.27},{"rooms_lat":49.26207,"countStuff":49.26},{"rooms_lat":49.26228,"countStuff":49.26},{"rooms_lat":49.2659,"countStuff":49.27},{"rooms_lat":49.26273,"countStuff":49.26},{"rooms_lat":49.26274,"countStuff":49.26},{"rooms_lat":49.26414,"countStuff":49.26},{"rooms_lat":49.26044,"countStuff":49.26},{"rooms_lat":49.26176,"countStuff":49.26},{"rooms_lat":49.26767,"countStuff":49.27},{"rooms_lat":49.26541,"countStuff":49.27},{"rooms_lat":49.26605,"countStuff":49.27},{"rooms_lat":49.2661,"countStuff":49.27},{"rooms_lat":49.26627,"countStuff":49.27},{"rooms_lat":49.26486,"countStuff":49.26},{"rooms_lat":49.26125,"countStuff":49.26},{"rooms_lat":49.27106,"countStuff":49.27},{"rooms_lat":49.26766,"countStuff":49.27},{"rooms_lat":49.2643,"countStuff":49.26},{"rooms_lat":49.26545,"countStuff":49.27},{"rooms_lat":49.26236,"countStuff":49.26},{"rooms_lat":49.26114,"countStuff":49.26},{"rooms_lat":49.266463,"countStuff":49.27},{"rooms_lat":49.266089,"countStuff":49.27},{"rooms_lat":49.26398,"countStuff":49.26},{"rooms_lat":49.26048,"countStuff":49.26},{"rooms_lat":49.26229,"countStuff":49.26},{"rooms_lat":49.264,"countStuff":49.26},{"rooms_lat":49.26047,"countStuff":49.26},{"rooms_lat":49.2642,"countStuff":49.26},{"rooms_lat":49.2683,"countStuff":49.27},{"rooms_lat":49.26867,"countStuff":49.27},{"rooms_lat":49.2663,"countStuff":49.27},{"rooms_lat":49.26517,"countStuff":49.27},{"rooms_lat":49.26293,"countStuff":49.26},{"rooms_lat":49.26478,"countStuff":49.26}]
+}

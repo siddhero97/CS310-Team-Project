@@ -1,0 +1,26 @@
+{    "title": "Group With Invalid Key",
+    "query":{
+        "WHERE": {
+            "GT": {
+                "courses_avg": 70
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "overallAvg"
+            ]
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": ["courses_hello"],
+            "APPLY": [
+                {
+                    "overallAvg": {
+                        "AVG": "courses_avg"
+                    }
+                }
+            ]
+        }
+    },
+                  "isQueryValid": false,
+                  "result":"InsightError"
+}

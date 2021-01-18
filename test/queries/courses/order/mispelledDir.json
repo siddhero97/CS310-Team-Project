@@ -1,0 +1,44 @@
+{
+    "title": "SELECT dept, avg WHERE avg < null order by courses_instructor",
+    "query":{
+        "WHERE": {
+            "GT": {
+                "courses_avg": 90
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_title",
+                "courses_dept",
+                "overallAvg",
+                "overallCount"
+            ],
+            "ORDER": {
+                "d": "DOWN",
+                "keys": [
+                    "courses_dept"
+                ]
+            }
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "courses_title",
+                "courses_dept"
+            ],
+            "APPLY": [
+                {
+                    "overallAvg": {
+                        "AVG": "courses_avg"
+                    }
+                },
+                {
+                    "overallCount": {
+                        "COUNT": "courses_avg"
+                    }
+                }
+            ]
+        }
+    },
+    "isQueryValid": false,
+    "result":"InsightError"
+}

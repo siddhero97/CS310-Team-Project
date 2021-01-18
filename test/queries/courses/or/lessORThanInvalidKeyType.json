@@ -1,0 +1,19 @@
+{
+    "title": "The value is string",
+    "query": {
+        "WHERE": {
+        "OR":[{
+            "LT": {
+                "courses_avg":"100"
+            }}]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_avg"
+            ]
+        }
+    },
+    "isQueryValid": false,
+    "result":"InsightError"
+}

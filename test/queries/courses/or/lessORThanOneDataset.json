@@ -1,0 +1,18 @@
+{
+    "title": " Invalid OR more than one dataset",
+    "query": {
+               "WHERE": {"OR":[{
+                 "LT": {
+                   "course_avg": 96.11
+                 }}]
+               },
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "courses_dept",
+                   "courses_avg"
+                 ]
+               }
+             },
+    "isQueryValid": false,
+    "result":"InsightError"
+}

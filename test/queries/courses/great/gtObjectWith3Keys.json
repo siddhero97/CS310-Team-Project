@@ -1,0 +1,29 @@
+{
+    "title": "GT has 3 objects ",
+    "query": {
+               "WHERE": {
+                 "GT": {
+                   "LT": {
+                     "courses_avg": 40
+                   },
+                   "GT": {
+                     "courses_avg": 0
+                   },
+                   "IS": {
+                     "courses_dept": "cpsc"
+                   }
+                 }
+               },
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "courses_dept",
+                   "courses_id",
+                   "courses_avg",
+                   "courses_instructor"
+                 ],
+                 "ORDER": "courses_avg"
+               }
+             },
+                  "isQueryValid": false,
+                  "result":"InsightError"
+}

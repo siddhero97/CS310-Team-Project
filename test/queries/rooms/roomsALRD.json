@@ -1,0 +1,21 @@
+{
+    "title": "Rooms Is",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "IS": {
+                        "roomsInvalidLocation_shortname": "ALRD"
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "roomsInvalidLocation_shortname"
+            ]
+        }
+    },
+    "isQueryValid": true,
+    "result":[]
+}

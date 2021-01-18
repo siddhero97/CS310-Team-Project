@@ -1,0 +1,15 @@
+{    "title": "OR is null ",
+    "query": {
+               "WHERE": {
+                 "OR": null
+               },
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "courses_dept",
+                   "courses_avg"
+                 ]
+               }
+             },
+                  "isQueryValid": false,
+                  "result":"InsightError"
+}

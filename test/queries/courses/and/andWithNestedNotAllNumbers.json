@@ -1,0 +1,48 @@
+{
+    "title": "AND with not in it; all numbers",
+    "query": {
+               "WHERE": {
+                 "AND": [
+                   {
+                     "GT": {
+                       "courses_fail": 0
+                     }
+                   },
+                   {"NOT": {
+                     "LT": {
+                       "courses_avg": 0
+                     }
+                   }},
+                   {
+                     "LT": {
+                       "courses_pass": 100
+                     }
+                   },
+                   {
+                     "GT": {
+                       "courses_audit": 0
+                     }
+                   },
+                   {
+                     "EQ": {
+                       "courses_year": 2016
+                     }
+                   }
+                 ]
+               },
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "courses_dept",
+                   "courses_id",
+                   "courses_avg",
+                   "courses_fail",
+                   "courses_pass",
+                   "courses_audit",
+                   "courses_year",
+                   "courses_uuid"
+                 ]
+               }
+             },
+                  "isQueryValid": true,
+                 "result":[{"courses_dept":"arth","courses_id":"345","courses_avg":76.85,"courses_fail":1,"courses_pass":64,"courses_audit":1,"courses_year":2016,"courses_uuid":"81037"},{"courses_dept":"chem","courses_id":"406","courses_avg":73.59,"courses_fail":2,"courses_pass":32,"courses_audit":4,"courses_year":2016,"courses_uuid":"31680"},{"courses_dept":"engl","courses_id":"231","courses_avg":74.37,"courses_fail":1,"courses_pass":40,"courses_audit":1,"courses_year":2016,"courses_uuid":"63171"},{"courses_dept":"fren","courses_id":"122","courses_avg":74.74,"courses_fail":1,"courses_pass":26,"courses_audit":1,"courses_year":2016,"courses_uuid":"58794"},{"courses_dept":"ital","courses_id":"101","courses_avg":77.91,"courses_fail":2,"courses_pass":30,"courses_audit":1,"courses_year":2016,"courses_uuid":"4343"},{"courses_dept":"ital","courses_id":"101","courses_avg":74.48,"courses_fail":1,"courses_pass":30,"courses_audit":1,"courses_year":2016,"courses_uuid":"4344"},{"courses_dept":"ital","courses_id":"201","courses_avg":70.2,"courses_fail":2,"courses_pass":23,"courses_audit":1,"courses_year":2016,"courses_uuid":"4346"},{"courses_dept":"japn","courses_id":"101","courses_avg":70.41,"courses_fail":1,"courses_pass":21,"courses_audit":1,"courses_year":2016,"courses_uuid":"6559"},{"courses_dept":"latn","courses_id":"101","courses_avg":68.89,"courses_fail":3,"courses_pass":24,"courses_audit":1,"courses_year":2016,"courses_uuid":"32087"},{"courses_dept":"latn","courses_id":"201","courses_avg":75.11,"courses_fail":1,"courses_pass":18,"courses_audit":2,"courses_year":2016,"courses_uuid":"32091"},{"courses_dept":"lled","courses_id":"441","courses_avg":85.08,"courses_fail":1,"courses_pass":39,"courses_audit":1,"courses_year":2016,"courses_uuid":"51811"},{"courses_dept":"mine","courses_id":"432","courses_avg":70.45,"courses_fail":2,"courses_pass":29,"courses_audit":1,"courses_year":2016,"courses_uuid":"43170"},{"courses_dept":"musc","courses_id":"300","courses_avg":72,"courses_fail":3,"courses_pass":54,"courses_audit":2,"courses_year":2016,"courses_uuid":"98504"}]
+}

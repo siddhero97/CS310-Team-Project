@@ -1,0 +1,25 @@
+{
+    "title": "OR WITH FILTER",
+    "query": {
+               "WHERE": {
+                 "OR": [
+                   {
+                     "LT": {
+                       "coursesavg": 40
+                     }
+                   }
+                 ]
+               }
+               ,
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "courses_dept",
+                   "courses_id",
+                   "courses_avg",
+                   "courses_instructor"
+                 ],
+                 "ORDER": "courses_avg"
+               }
+               },"isQueryValid":false,
+              "result":"InsightError"
+}

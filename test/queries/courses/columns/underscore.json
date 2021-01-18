@@ -1,0 +1,13 @@
+{
+    "title": "Cannot reference dataset cannot be empty string",
+    "query":{
+              "WHERE": {},
+              "OPTIONS": {
+                "COLUMNS": [
+                  "__dept"
+                ]
+              }
+            },
+    "isQueryValid": false,
+    "result":"InsightError"
+}

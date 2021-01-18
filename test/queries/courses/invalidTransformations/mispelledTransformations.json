@@ -1,0 +1,37 @@
+{    "title": "Mispelled Transformations",
+    "query":{
+        "WHERE": {
+            "GT": {
+                "courses_avg": 90
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_title",
+                "courses_dept",
+                "overallAvg",
+                "overallCount"
+            ], "ORDER": "overallCount"
+        },
+        "TRANSFIONS": {
+            "GROUP": [
+                "courses_title",
+                "courses_dept"
+            ],
+            "APPLY": [
+                {
+                    "overallAvg": {
+                        "AVG": "courses_avg"
+                    }
+                },
+                {
+                    "overallCount": {
+                        "COUNT": "courses_avg"
+                    }
+                }
+            ]
+        }
+    },
+                  "isQueryValid": false,
+                  "result":"InsightError"
+}

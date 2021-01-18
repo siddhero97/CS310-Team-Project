@@ -1,0 +1,60 @@
+{
+    "title": "Columns must be non-empty array",
+    "query":{
+              "WHERE": {
+                "AND": [
+                  {
+                    "GT": {
+                      "courses_fail": 50
+                    }
+                  },
+                  {
+                    "GT": {
+                      "courses_avg": 50
+                    }
+                  },
+                  {
+                    "OR": [
+                      {
+                        "GT": {
+                          "courses_pass": 90
+                        }
+                      },
+                      {
+                        "GT": {
+                          "courses_audit": 0
+                        }
+                      },
+                      {
+                        "EQ": {
+                          "courses_year": 2016
+                        }
+                      },
+                      {
+                        "IS": {
+                          "courses_dept": "econ"
+                        }
+                      },
+                      {
+                        "IS": {
+                          "courses_instructor": "*"
+                        }
+                      },
+                      {
+                        "IS": {
+                          "courses_title": "*micrecon"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              "OPTIONS": {
+                "COLUMNS":
+                  {}
+
+              }
+            },
+    "isQueryValid": false,
+    "result":"InsightError"
+}

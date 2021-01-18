@@ -1,0 +1,38 @@
+{
+    "title": "Rooms Is",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "GT": {
+                        "rooms_seats": 0
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_lon"
+            ]
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "rooms_lon"
+            ],
+            "APPLY": [
+                {
+                    "maxStuff": {
+                        "MAX": "rooms_lat"
+                    }
+                },
+                {
+                    "avgStuff": {
+                        "AVG": "rooms_furniture"
+                    }
+                }
+            ]
+        }
+    },
+    "isQueryValid": false,
+    "result":"InsightError"
+}

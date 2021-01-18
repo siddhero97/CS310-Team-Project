@@ -1,0 +1,18 @@
+{    "title": "Null Transformations ",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_avg": 70
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_title",
+                "overallAvg"
+            ]
+        },
+        "TRANSFORMATIONS": null
+    },
+                  "isQueryValid": false,
+                  "result":"InsightError"
+}

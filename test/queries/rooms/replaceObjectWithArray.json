@@ -1,0 +1,33 @@
+{
+    "title": "Rooms Is",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "GT": {
+                        "rooms_seats": 0
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_lat",
+                "countStuff"
+            ]
+        },
+        "TRANSFORMATIONS": [{
+            "GROUP": [
+                "rooms_lat"
+            ],
+            "APPLY": [
+                {
+                    "countStuff": {
+                        "AVG": "rooms_lat"
+                    }
+                }
+            ]
+        }]},
+    "isQueryValid": false,
+    "result":"InsightError"
+}

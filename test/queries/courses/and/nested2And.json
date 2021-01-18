@@ -1,0 +1,70 @@
+{
+    "title": "nested 2 AND",
+    "query": {
+               "WHERE": {
+                 "AND": [
+                   {
+                     "GT": {
+                       "courses_fail": 0
+                     }
+                   },
+                   {
+                     "GT": {
+                       "courses_avg": 50
+                     }
+                   },
+                   { "AND": [
+                     {"GT": {
+                       "courses_pass": 50
+                     }
+                   },
+                   {
+                     "GT": {
+                       "courses_audit": -1
+                     }
+                   }]},
+                   {
+                     "EQ": {
+                       "courses_year": 2016
+                     }
+                   },
+                   {
+                     "IS": {
+                       "courses_dept": "econ"
+                     }
+                   },
+                   {
+                     "IS": {
+                       "courses_instructor": "*gateman*"
+                     }
+                   },
+                   {
+                     "IS": {
+                       "courses_title": "*micrecon"
+                     }
+                   },
+                   {
+                     "IS": {
+                       "courses_uuid": "997*"
+                     }
+                   }
+                 ]
+               },
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "courses_dept",
+                   "courses_id",
+                   "courses_avg",
+                   "courses_fail",
+                   "courses_pass",
+                   "courses_audit",
+                   "courses_year",
+                   "courses_uuid",
+                   "courses_instructor",
+                   "courses_title"
+                 ]
+               }
+             },
+                  "isQueryValid": true,
+               "result":[{"courses_dept":"econ","courses_id":"101","courses_avg":69.08,"courses_fail":17,"courses_pass":234,"courses_audit":0,"courses_year":2016,"courses_uuid":"9971","courses_instructor":"gateman, robert","courses_title":"prncpls micrecon"},{"courses_dept":"econ","courses_id":"101","courses_avg":69.99,"courses_fail":18,"courses_pass":395,"courses_audit":0,"courses_year":2016,"courses_uuid":"9972","courses_instructor":"gateman, robert","courses_title":"prncpls micrecon"},{"courses_dept":"econ","courses_id":"101","courses_avg":68.69,"courses_fail":23,"courses_pass":193,"courses_audit":0,"courses_year":2016,"courses_uuid":"9973","courses_instructor":"gateman, robert","courses_title":"prncpls micrecon"}]
+}

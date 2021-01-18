@@ -1,0 +1,34 @@
+{
+    "title": "group is null",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "GT": {
+                        "rooms_seats": 0
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_lon",
+                "countStuff"
+            ]
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "rooms_lon","countStuff"
+            ],
+            "APPLY": [
+                {
+                    "countStuff": {
+                        "AVG": "rooms_lon"
+                    }
+                }
+            ]
+        }
+    },
+    "isQueryValid": false,
+    "result":"InsightError"
+}

@@ -1,0 +1,35 @@
+{
+    "title": "Rooms Is",
+    "query": {
+        "WHERE": {
+            "IS": {
+                "rooms_fullname": "*"
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_fullname",
+                "rooms_shortname"
+            ]
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "rooms_lon"
+            ],
+            "APPLY": [
+                {
+                    "maxStuff": {
+                        "MAX": "rooms_lat"
+                    }
+                },
+                {
+                    "avgStuff": {
+                        "AVG": "rooms_furniture"
+                    }
+                }
+            ]
+        }
+    },
+    "isQueryValid": false,
+    "result":"InsightError"
+}

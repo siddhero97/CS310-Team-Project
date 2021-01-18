@@ -1,0 +1,45 @@
+{
+    "title": "AND with not",
+    "query": {
+               "WHERE": {
+                 "AND": [
+                   {
+                     "IS": {
+                       "courses_dept": "biol"
+                     }
+                   }, {"NOT": {
+
+                     "IS": {
+                       "courses_id": "110"
+                     }
+                   }},
+                   {
+                     "IS": {
+                       "courses_instructor": "zeiler*"
+                     }
+                   },
+                   {
+                     "IS": {
+                       "courses_title": "intr modern bio"
+                     }
+                   },
+                   {
+                     "IS": {
+                       "courses_uuid": "4055"
+                     }
+                   }
+                 ]
+               },
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "courses_dept",
+                   "courses_id",
+                   "courses_instructor",
+                   "courses_title",
+                   "courses_uuid"
+                 ]
+               }
+             },
+                  "isQueryValid": true,
+                "result":[{"courses_dept":"biol","courses_id":"111","courses_instructor":"zeiler, kathryn","courses_title":"intr modern bio","courses_uuid":"4055"}]
+}

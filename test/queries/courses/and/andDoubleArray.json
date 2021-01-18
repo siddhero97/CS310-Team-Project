@@ -1,0 +1,25 @@
+{
+    "title": "and double Array",
+    "query": {
+        "WHERE": {
+            "AND": [
+                ["GT"]
+
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_id",
+                "courses_avg",
+                "courses_fail",
+                "courses_pass",
+                "courses_audit",
+                "courses_year",
+                "courses_uuid"
+            ]
+        }
+    },
+                  "isQueryValid": false,
+                "result":"InsightError"
+}

@@ -1,0 +1,21 @@
+{
+    "title": "Rooms Is",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "IS": {
+                        "rooms_shortname": "ACU"
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_shortname"
+            ]
+        }
+    },
+    "isQueryValid": true,
+    "result":[]
+}

@@ -1,0 +1,18 @@
+{
+    "title": "SELECT dept, avg WHERE avg = 98",
+    "query": {
+               "WHERE": {
+                 "EQ": {
+                   "courses_avg": 96.11
+                 }
+               },
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "courses_dept",
+                   "courses_avg"
+                 ]
+               }
+             },
+    "isQueryValid": true,
+    "result":[{"courses_dept":"adhe","courses_avg":96.11}]
+}

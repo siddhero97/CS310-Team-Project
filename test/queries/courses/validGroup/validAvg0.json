@@ -1,0 +1,37 @@
+{
+    "title": "valid avg 0",
+    "query":{
+        "WHERE": {
+            "AND" :[ {
+                "EQ": {
+                    "courses_audit": 0
+                } }, {
+                "IS": {
+                    "courses_title": "jpn*"
+                }
+            }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_title",
+                "overallCountAvg"
+            ], "ORDER": {"dir": "UP","keys":["overallCountAvg"]}
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "courses_title"
+            ],
+            "APPLY": [
+
+                {
+                    "overallCountAvg": {
+                        "AVG": "courses_audit"
+                    }
+                }
+            ]
+        }
+    },
+    "isQueryValid": true,
+    "result":[{"courses_title":"jpn: prob paint","overallCountAvg":0},{"courses_title":"jpn: print media","overallCountAvg":0},{"courses_title":"jpn sex&gend flm","overallCountAvg":0},{"courses_title":"jpn travel lit","overallCountAvg":0}]
+}
