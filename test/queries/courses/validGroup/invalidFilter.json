@@ -1,0 +1,45 @@
+{
+    "title": "valid count",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "EQ": {
+                        "courses_audit": 0
+                    }
+                },
+                {
+                    "IS": {
+                        "courses_title": "jpn*"
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_title",
+                "overallCountAvg"
+            ],
+            "ORDER": {
+                "dir": "UP",
+                "keys": [
+                    "overallCountAvg"
+                ]
+            }
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "rooms_title"
+            ],
+            "APPLY": [
+                {
+                    "overallCountAvg": {
+                        "AVG": "rooms_lat"
+                    }
+                }
+            ]
+        }
+    },
+    "isQueryValid": false,
+    "result":"InsightError"
+}

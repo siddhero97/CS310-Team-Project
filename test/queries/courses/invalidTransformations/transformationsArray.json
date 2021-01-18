@@ -1,0 +1,18 @@
+{    "title": "Array Transformations",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_avg": 70
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_title",
+                "overallAvg"
+            ]
+        },
+        "TRANSFORMATIONS": []
+    },
+                  "isQueryValid": false,
+                  "result":"InsightError"
+}

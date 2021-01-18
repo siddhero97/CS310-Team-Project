@@ -1,0 +1,19 @@
+{
+    "title": "SELECT dept, avg WHERE avg < null order by courses_dept",
+    "query":{
+              "WHERE": {
+                "IS": {
+                  "courses_dept": "aan"
+                }
+              },
+              "OPTIONS": {
+                "COLUMNS": [
+                  "courses1_dept",
+                  "courses1_avg"
+                ],
+                "ORDER": "courses_avg"
+              }
+            },
+    "isQueryValid": false,
+    "result":"InsightError"
+}

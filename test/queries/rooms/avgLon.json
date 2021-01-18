@@ -1,0 +1,34 @@
+{
+    "title": "Rooms Is",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "GT": {
+                        "rooms_seats": 0
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_lon",
+                "countStuff"
+            ]
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "rooms_lon"
+            ],
+            "APPLY": [
+                {
+                    "countStuff": {
+                        "AVG": "rooms_lon"
+                    }
+                }
+            ]
+        }
+    },
+    "isQueryValid": true,
+    "result":[{"rooms_lon":-123.25318,"countStuff":-123.25},{"rooms_lon":-123.25741,"countStuff":-123.26},{"rooms_lon":-123.25099,"countStuff":-123.25},{"rooms_lon":-123.25655,"countStuff":-123.26},{"rooms_lon":-123.25249,"countStuff":-123.25},{"rooms_lon":-123.25237,"countStuff":-123.25},{"rooms_lon":-123.25468,"countStuff":-123.25},{"rooms_lon":-123.25314,"countStuff":-123.25},{"rooms_lon":-123.24718,"countStuff":-123.25},{"rooms_lon":-123.25308,"countStuff":-123.25},{"rooms_lon":-123.24894,"countStuff":-123.25},{"rooms_lon":-123.25198,"countStuff":-123.25},{"rooms_lon":-123.25224,"countStuff":-123.25},{"rooms_lon":-123.24959,"countStuff":-123.25},{"rooms_lon":-123.24886,"countStuff":-123.25},{"rooms_lon":-123.25179,"countStuff":-123.25},{"rooms_lon":-123.25583,"countStuff":-123.26},{"rooms_lon":-123.24608,"countStuff":-123.25},{"rooms_lon":-123.25623,"countStuff":-123.26},{"rooms_lon":-123.25165,"countStuff":-123.25},{"rooms_lon":-123.25374,"countStuff":-123.25},{"rooms_lon":-123.25364,"countStuff":-123.25},{"rooms_lon":-123.24807,"countStuff":-123.25},{"rooms_lon":-123.25042,"countStuff":-123.25},{"rooms_lon":-123.2521,"countStuff":-123.25},{"rooms_lon":-123.25505,"countStuff":-123.26},{"rooms_lon":-123.25533,"countStuff":-123.26},{"rooms_lon":-123.24494,"countStuff":-123.24},{"rooms_lon":-123.24935,"countStuff":-123.25},{"rooms_lon":-123.25027,"countStuff":-123.25},{"rooms_lon":-123.255534,"countStuff":-123.26},{"rooms_lon":-123.254816,"countStuff":-123.25},{"rooms_lon":-123.2531,"countStuff":-123.25},{"rooms_lon":-123.24944,"countStuff":-123.25},{"rooms_lon":-123.24342,"countStuff":-123.24},{"rooms_lon":-123.2559,"countStuff":-123.26},{"rooms_lon":-123.24467,"countStuff":-123.24},{"rooms_lon":-123.24842,"countStuff":-123.25},{"rooms_lon":-123.25692,"countStuff":-123.26},{"rooms_lon":-123.2466,"countStuff":-123.25},{"rooms_lon":-123.24937,"countStuff":-123.25},{"rooms_lon":-123.25431,"countStuff":-123.25},{"rooms_lon":-123.24673,"countStuff":-123.25}]
+}

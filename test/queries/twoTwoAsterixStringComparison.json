@@ -1,0 +1,26 @@
+{
+    "title": "SELECT * WHERE dept == '**'",
+    "query": {
+        "WHERE": {
+            "EQ": {
+                "twoBasicValid_dept":"**"
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "twoBasicValid_dept",
+                "twoBasicValid_id",
+                "twoBasicValid_avg",
+                "twoBasicValid_instructor",
+                "twoBasicValid_title",
+                "twoBasicValid_pass",
+                "twoBasicValid_fail",
+                "twoBasicValid_audit",
+                "twoBasicValid_uuid",
+                "twoBasicValid_year"
+            ]
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

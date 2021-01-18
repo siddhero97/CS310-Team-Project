@@ -1,0 +1,36 @@
+{
+    "title": "valid count",
+    "query": {
+        "WHERE": {
+            "IS": {
+                "courses_title": "r*"
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_title",
+                "overallCount",
+                "overallCountAvg"
+            ]
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "courses_title"
+            ],
+            "APPLY": [
+                {
+                    "overallCount": {
+                        "AVG": "courses_instructor"
+                    }
+                },
+                {
+                    "overallCountAvg": {
+                        "AVG": "courses_avg"
+                    }
+                }
+            ]
+        }
+    },
+    "isQueryValid": false,
+    "result":"InsightError"
+}

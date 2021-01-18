@@ -1,0 +1,18 @@
+{
+    "title": "Rooms Is",
+    "query": {
+        "WHERE": {
+            "IS": {
+                "rooms_fullname": "Hugh Dempster Pavilion"
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_fullname",
+                "rooms_shortname"
+            ]
+        }
+    },
+    "isQueryValid": true,
+    "result":[{"rooms_fullname":"Hugh Dempster Pavilion","rooms_shortname":"DMP"},{"rooms_fullname":"Hugh Dempster Pavilion","rooms_shortname":"DMP"},{"rooms_fullname":"Hugh Dempster Pavilion","rooms_shortname":"DMP"},{"rooms_fullname":"Hugh Dempster Pavilion","rooms_shortname":"DMP"},{"rooms_fullname":"Hugh Dempster Pavilion","rooms_shortname":"DMP"}]
+}

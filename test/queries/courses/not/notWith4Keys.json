@@ -1,0 +1,29 @@
+{
+    "title": "NOT should only have 2 key, has 0 ",
+    "query": {
+               "WHERE": {
+                 "NOT": {
+                   "GT": {
+                     "courses_avg": 5
+                   },
+                   "LT": {
+                     "courses_avg": 99
+                   },
+                   "IS": {
+                     "courses_uuid": "intr modern bio"
+                   },
+                   "EQ": {
+                     "courses_year": 2016
+                   }
+                 }
+               },
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "courses_dept",
+                   "courses_avg"
+                 ]
+               }
+             },
+                  "isQueryValid": false,
+                  "result":"InsightError"
+}

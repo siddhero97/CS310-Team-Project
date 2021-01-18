@@ -1,0 +1,33 @@
+{
+    "title": "Rooms Is",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "GT": {
+                        "rooms_seats": 0
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "countStuff"
+            ]
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "rooms_lon"
+            ],
+            "APPLY": [
+                {
+                    "countStuff": {
+                        "COUNT": "rooms_seats"
+                    }
+                }
+            ]
+        }
+    },
+    "isQueryValid": true,
+    "result":[{"countStuff":4},{"countStuff":4},{"countStuff":1},{"countStuff":2},{"countStuff":3},{"countStuff":2},{"countStuff":19},{"countStuff":1},{"countStuff":3},{"countStuff":4},{"countStuff":7},{"countStuff":1},{"countStuff":3},{"countStuff":6},{"countStuff":7},{"countStuff":3},{"countStuff":5},{"countStuff":1},{"countStuff":7},{"countStuff":2},{"countStuff":5},{"countStuff":15},{"countStuff":4},{"countStuff":2},{"countStuff":10},{"countStuff":5},{"countStuff":4},{"countStuff":2},{"countStuff":5},{"countStuff":8},{"countStuff":5},{"countStuff":1},{"countStuff":7},{"countStuff":5},{"countStuff":5},{"countStuff":2},{"countStuff":3},{"countStuff":6},{"countStuff":3},{"countStuff":2},{"countStuff":2},{"countStuff":5},{"countStuff":10}]
+}

@@ -1,0 +1,40 @@
+{
+    "title": "Rooms Is",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "IS": {
+                        "rooms_href": "*"
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "countStuff"
+            ],
+            "ORDER": {
+                "dir": "DOWN",
+                "keys": [
+                    "countStuff"
+                ]
+            }
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "countStuff"
+            ],
+            "APPLY": [
+                {
+                    "countStuff": {
+                        "COUNT": "rooms_href"
+                    }
+                }
+            ]
+        }
+    },
+    "isQueryValid": false,
+    "result":"InsightError"
+
+}

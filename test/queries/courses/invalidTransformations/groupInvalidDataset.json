@@ -1,0 +1,26 @@
+{    "title": "Group With Invalid Dataset",
+    "query":{
+        "WHERE": {
+            "GT": {
+                "courses_avg": 70
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "overallAvg"
+            ]
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": ["courses1_avg"],
+            "APPLY": [
+                {
+                    "overallAvg": {
+                        "AVG": "courses_avg"
+                    }
+                }
+            ]
+        }
+    },
+                  "isQueryValid": false,
+                  "result":"InsightError"
+}

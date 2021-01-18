@@ -1,0 +1,32 @@
+{
+    "title": " Invalid key value",
+    "query":{
+              "WHERE": {
+                "AND": [{
+                "IS": {
+                  "courses_dept": "cpsc"
+                }
+                },{
+                  "IS": {
+                    "courses_id": "313"
+                  }
+                }]
+              },
+              "OPTIONS": {
+                "COLUMNS": [
+                  "courses_det",
+                  "courses_avg",
+                  "courses_i",
+                  "courses_instructor",
+                  "courses_title",
+                  "courses_ass",
+                  "courses_fail",
+                  "courses_audit"
+                ]
+              }
+            }
+,
+    "isQueryValid": false,
+    "result":"InsightError"
+}
+

@@ -1,0 +1,19 @@
+{
+    "title": "Order is not present",
+    "query":{
+        "WHERE": {
+            "GT": {
+                "courses_avg": 97
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_avg"
+            ],
+            "ORER": "courses_avg"
+        }
+    },
+    "isQueryValid": false,
+    "result":"InsightError"
+}

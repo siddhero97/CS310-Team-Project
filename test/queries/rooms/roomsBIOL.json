@@ -1,0 +1,21 @@
+{
+    "title": "Rooms Is",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "IS": {
+                        "roomsInvalidLocation_shortname": "BIOL"
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "roomsInvalidLocation_shortname"
+            ]
+        }
+    },
+    "isQueryValid": true,
+    "result":[{"roomsInvalidLocation_shortname":"BIOL"},{"roomsInvalidLocation_shortname":"BIOL"},{"roomsInvalidLocation_shortname":"BIOL"},{"roomsInvalidLocation_shortname":"BIOL"}]
+}

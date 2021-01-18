@@ -1,0 +1,18 @@
+{
+    "title": " Equal Invalid ID",
+    "query": {
+               "WHERE": {
+                 "EQ": [{
+                   "courses_avg": 96.11
+                 }]
+               },
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "courses_dept",
+                   "courses_avg"
+                 ]
+               }
+             },
+    "isQueryValid": false,
+    "result":"InsightError"
+}

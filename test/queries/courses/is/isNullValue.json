@@ -1,0 +1,18 @@
+{
+    "title": "Invalid Value for is",
+    "query": {
+        "WHERE": {
+            "IS": {
+                "courses_dept":null
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_avg"
+            ]
+        }
+    },
+    "isQueryValid": false,
+    "result":"InsightError"
+}

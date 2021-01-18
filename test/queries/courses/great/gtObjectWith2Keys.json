@@ -1,0 +1,21 @@
+{
+    "title": "EQ with object 2 keys ",
+    "query": {
+               "WHERE": {
+                 "GT": {
+                   "courses_avg": 96.11,
+                   "IS": {
+                     "courses_dept": "cpsc"
+                   }
+                 }
+               },
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "courses_dept",
+                   "courses_avg"
+                 ]
+               }
+             },
+                  "isQueryValid": false,
+                  "result":"InsightError"
+}

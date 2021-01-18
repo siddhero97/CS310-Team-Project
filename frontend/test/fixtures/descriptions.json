@@ -1,0 +1,5 @@
+{
+    "query1": "simple query IS comparison for department with two columns and old order syntax",
+    "roomBasic1": "simple room EQ comparison for seats with three columns and fullname order",
+    "courseComplex1": "complex course IS comparison for instructor with five columns sort by average & department, groups and transformation"
+}

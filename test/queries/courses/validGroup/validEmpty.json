@@ -1,0 +1,36 @@
+{
+    "title": "single element present in columns ",
+    "query": {
+        "WHERE": {
+            "IS": {
+                "courses_title": "sdsdsdsdsdsdsdsd"
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_title",
+                "overallCount",
+                "overallCountAvg"
+            ]
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "courses_title"
+            ],
+            "APPLY": [
+                {
+                    "overallCount": {
+                        "COUNT": "courses_instructor"
+                    }
+                },
+                {
+                    "overallCountAvg": {
+                        "COUNT": "courses_avg"
+                    }
+                }
+            ]
+        }
+    },
+    "isQueryValid": true,
+    "result":[]
+}

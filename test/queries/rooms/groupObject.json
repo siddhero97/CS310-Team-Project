@@ -1,0 +1,38 @@
+{
+    "title": "group is null",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "IS": {
+                        "rooms_furniture": "*Classroom*"
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_shortname",
+                "countStuff"
+            ],
+            "ORDER": {
+                "dir": "DOWN",
+                "keys": [
+                    "countStuff"
+                ]
+            }
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": {},
+            "APPLY": [
+                {
+                    "countStuff": {
+                        "AVG": "rooms_lat"
+                    }
+                }
+            ]
+        }
+    },
+    "isQueryValid": false,
+    "result":"InsightError"
+}

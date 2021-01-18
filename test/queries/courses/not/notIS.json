@@ -1,0 +1,28 @@
+{
+    "title": "not is ",
+    "query": {
+               "WHERE": {
+                 "NOT": {
+                   "IS": {
+                     "courses_dept": "*"
+                   }
+                 }
+               },
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "courses_dept",
+                   "courses_id",
+                   "courses_avg",
+                   "courses_fail",
+                   "courses_pass",
+                   "courses_audit",
+                   "courses_year",
+                   "courses_uuid",
+                   "courses_instructor",
+                   "courses_title"
+                 ]
+               }
+             },
+                  "isQueryValid": true,
+                "result":[]
+}

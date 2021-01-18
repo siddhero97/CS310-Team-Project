@@ -1,0 +1,28 @@
+{
+    "title": "AND with object 3 keys ",
+    "query": {
+               "WHERE": {
+                 "AND": [
+                   {
+                     "LT": {
+                       "courses_avg": 40
+                     },
+                     "GT": {
+                       "courses_avg": 0
+                     }
+                   }
+                 ]
+               },
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "courses_dept",
+                   "courses_id",
+                   "courses_avg",
+                   "courses_instructor"
+                 ],
+                 "ORDER": "courses_avg"
+               }
+             },
+                  "isQueryValid": false,
+                  "result":"InsightError"
+}

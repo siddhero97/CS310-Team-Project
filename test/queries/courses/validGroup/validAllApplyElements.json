@@ -1,0 +1,54 @@
+{
+    "title": "validateAllApplyElements",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_avg": 98
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_title",
+                "overallAvg",
+                "overallSum",
+                "overallMin",
+                "overallMax",
+                "overallCount"
+            ]
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "courses_title"
+            ],
+            "APPLY": [
+                {
+                    "overallAvg": {
+                        "AVG": "courses_avg"
+                    }
+                },
+                {
+                    "overallSum": {
+                        "SUM": "courses_avg"
+                    }
+                },
+                {
+                    "overallMin": {
+                        "MIN": "courses_avg"
+                    }
+                },
+                {
+                    "overallMax": {
+                        "MAX": "courses_avg"
+                    }
+                },
+                {
+                    "overallCount": {
+                        "COUNT": "courses_avg"
+                    }
+                }
+            ]
+        }
+    },
+    "isQueryValid": true,
+    "result":[{"courses_title":"career planning","overallAvg":99.19,"overallSum":99.19,"overallMin":99.19,"overallMax":99.19,"overallCount":1},{"courses_title":"multimedia sys","overallAvg":98.75,"overallSum":197.5,"overallMin":98.75,"overallMax":98.75,"overallCount":1},{"courses_title":"assess lrn diffi","overallAvg":98.38,"overallSum":295.14,"overallMin":98.08,"overallMax":98.7,"overallCount":3},{"courses_title":"educ stds autism","overallAvg":98.7,"overallSum":493.48,"overallMin":98.58,"overallMax":98.8,"overallCount":3},{"courses_title":"dev el sk df&hrd","overallAvg":98.45,"overallSum":196.9,"overallMin":98.45,"overallMax":98.45,"overallCount":1},{"courses_title":"algb topology i","overallAvg":99.78,"overallSum":199.56,"overallMin":99.78,"overallMax":99.78,"overallCount":1},{"courses_title":"cl pro prim care","overallAvg":98.46,"overallSum":393.84,"overallMin":98.21,"overallMax":98.71,"overallCount":2},{"courses_title":"fam nrs pract","overallAvg":98.54,"overallSum":394.16,"overallMin":98.5,"overallMax":98.58,"overallCount":2},{"courses_title":"work int health","overallAvg":98.98,"overallSum":197.96,"overallMin":98.98,"overallMax":98.98,"overallCount":1}]
+}

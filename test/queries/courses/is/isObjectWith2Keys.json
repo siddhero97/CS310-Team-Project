@@ -1,0 +1,21 @@
+{
+    "title": "IS object with 2 keys ",
+    "query": {
+               "WHERE": {
+                 "IS": {
+                   "courses_avg": 96.11,
+                   "IS": {
+                     "courses_dept": "cpsc"
+                   }
+                 }
+               },
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "courses_dept",
+                   "courses_avg"
+                 ]
+               }
+             },
+                  "isQueryValid": false,
+                  "result":"InsightError"
+}

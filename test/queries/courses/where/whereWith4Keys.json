@@ -1,0 +1,26 @@
+{
+    "title": "where must have an object with 2 keys",
+    "query":{
+              "WHERE": {
+                "GT": {
+                  "courses_avg": 97
+                },
+                "IS": {
+                  "courses_id": "320"
+                },"IS": {
+                                    "courses_dept": ""
+                                  },"IS": {
+                                                                       "courses_instructor": ""
+                                                                     }
+              },
+              "OPTIONS": {
+                "COLUMNS": [
+                  "courses_dept",
+                  "courses_avg"
+                ],
+                "ORDER": "courses_avg"
+              }
+            },
+                 "isQueryValid": false,
+                 "result": "InsightError"
+             }

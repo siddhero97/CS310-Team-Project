@@ -1,0 +1,18 @@
+{
+    "title": "eq missing field ",
+    "query":{
+              "WHERE": {
+                "EQ": {
+                  "courses_": 96.11
+                }
+              },
+              "OPTIONS": {
+                "COLUMNS": [
+                  "courses_dept",
+                  "courses_avg"
+                ]
+              }
+            },
+                  "isQueryValid": false,
+                  "result":"InsightError"
+}

@@ -1,0 +1,18 @@
+{
+    "title": " Invalid more than one dataset",
+    "query": {
+               "WHERE": {
+                 "IS": {
+                   "course_dept": "*"
+                 }
+               },
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "courses_dept",
+                   "courses_avg"
+                 ]
+               }
+             },
+    "isQueryValid": false,
+    "result":"InsightError"
+}
